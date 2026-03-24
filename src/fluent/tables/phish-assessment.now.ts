@@ -1,241 +1,235 @@
 import '@servicenow/sdk/global'
 import { 
-  Table, 
-  StringColumn, 
-  ChoiceColumn, 
-  DateTimeColumn, 
-  ReferenceColumn,
-  BooleanColumn 
+    Table, 
+    StringColumn, 
+    DateColumn, 
+    ReferenceColumn, 
+    IntegerColumn, 
+    BooleanColumn 
 } from '@servicenow/sdk/core'
 
-/**
- * SAFER Framework Phishing Assessment Table
- * 
- * This table stores comprehensive phishing analysis results using the SAFER framework:
- * S - Sender Address analysis (display name vs domain, typosquatting, spoofing)
- * A - Attachments/Links analysis (suspicious files, hidden URLs, shortened links) 
- * F - Feelings analysis (urgency, fear, confusion, curiosity triggers)
- * E - External Email Tag analysis (presence and context)
- * R - Report generation (overall score, record creation, security alerts)
- */
+// PhishGuard AI Assessment Table - Stores comprehensive analysis of forwarded emails
 export const x_snc_phishguard_assessment = Table({
-  name: 'x_snc_phishguard_assessment',
-  label: 'Phish Assessment',
-  
-  // Table configuration
-  display: 'email_subject',
-  accessible_from: 'package_private', // Only accessible within PhishGuard AI scope
-  actions: ['create', 'read', 'update', 'delete'],
-  audit: true, // Track all changes for security purposes
-  
-  schema: {
-    // ==================== EMAIL METADATA FIELDS ====================
-    
-    // FORWARDED EMAIL (the email sent to isthissafe@service-now.com)
-    forwarded_email_record: ReferenceColumn({
-      label: 'Forwarded Email Record',
-      referenceTable: 'sys_email',
-      active: true
-    }),
-    
-    forwarded_email_date: DateTimeColumn({
-      label: 'Forwarded Email Date',
-      active: true
-    }),
-    
-    reported_by: ReferenceColumn({
-      label: 'Reported By',
-      referenceTable: 'sys_user',
-      active: true
-    }),
-    
-    reporter_email_address: StringColumn({
-      label: 'Reporter Email Address',
-      maxLength: 255,
-      active: true
-    }),
-    
-    // ORIGINAL EMAIL BEING ANALYZED (the phishing email)
-    email_subject: StringColumn({
-      label: 'Email Subject',
-      maxLength: 500,
-      mandatory: true,
-      active: true
-    }),
-    
-    sender_display_name: StringColumn({
-      label: 'Sender Display Name',
-      maxLength: 255,
-      active: true
-    }),
-    
-    sender_email: StringColumn({
-      label: 'Sender Email',
-      maxLength: 255,
-      active: true
-    }),
-    
-    sender_domain: StringColumn({
-      label: 'Sender Domain',
-      maxLength: 255,
-      active: true
-    }),
-    
-    email_received_date: DateTimeColumn({
-      label: 'Email Received Date',
-      active: true
-    }),
-    
-    email_body: StringColumn({
-      label: 'Email Body',
-      maxLength: 4000,
-      active: true
-    }),
-    
-    email_record: ReferenceColumn({
-      label: 'Email Record',
-      referenceTable: 'sys_email',
-      active: true
-    }),
+    name: 'x_snc_phishguard_assessment',
+    label: 'Phish Assessment',
+    schema: {
+        // === FORWARDED EMAIL INFORMATION ===
+        // The email sent by company employee to security team
+        forwarded_email_record: ReferenceColumn({ 
+            label: 'Forwarded Email Record', 
+            referenceTable: 'sys_email',
+            hint: 'Reference to the email forwarded to the security team'
+        }),
+        forwarded_email_date: DateColumn({ 
+            label: 'Forwarded Email Date',
+            hint: 'When the employee forwarded the email to security team' 
+        }),
+        reported_by: ReferenceColumn({ 
+            label: 'Reported By', 
+            referenceTable: 'sys_user',
+            hint: 'Company employee who forwarded the suspicious email'
+        }),
+        reporter_email_address: StringColumn({ 
+            label: 'Reporter Email Address', 
+            maxLength: 255,
+            hint: 'Email address of the employee who reported'
+        }),
 
-    // ==================== SAFER SCORE FIELDS ====================
-    
-    // S - Sender Address Analysis
-    safer_s_risk: ChoiceColumn({
-      label: 'SAFER S - Sender Risk Level',
-      dropdown: 'dropdown_with_none',
-      active: true,
-      choices: {
-        high: { label: 'HIGH', sequence: 0 },
-        medium: { label: 'MEDIUM', sequence: 1 },
-        low: { label: 'LOW', sequence: 2 }
-      }
-    }),
-    
-    safer_s_notes: StringColumn({
-      label: 'SAFER S - Sender Analysis Notes',
-      maxLength: 1000,
-      active: true
-    }),
-    
-    // A - Attachments/Links Analysis
-    safer_a_risk: ChoiceColumn({
-      label: 'SAFER A - Attachments/Links Risk Level',
-      dropdown: 'dropdown_with_none',
-      active: true,
-      choices: {
-        high: { label: 'HIGH', sequence: 0 },
-        medium: { label: 'MEDIUM', sequence: 1 },
-        low: { label: 'LOW', sequence: 2 }
-      }
-    }),
-    
-    safer_a_notes: StringColumn({
-      label: 'SAFER A - Attachments/Links Analysis Notes',
-      maxLength: 1000,
-      active: true
-    }),
-    
-    // F - Feelings/Urgency Analysis
-    safer_f_risk: ChoiceColumn({
-      label: 'SAFER F - Feelings/Urgency Risk Level',
-      dropdown: 'dropdown_with_none',
-      active: true,
-      choices: {
-        high: { label: 'HIGH', sequence: 0 },
-        medium: { label: 'MEDIUM', sequence: 1 },
-        low: { label: 'LOW', sequence: 2 }
-      }
-    }),
-    
-    safer_f_notes: StringColumn({
-      label: 'SAFER F - Feelings/Urgency Analysis Notes',
-      maxLength: 1000,
-      active: true
-    }),
-    
-    // E - External Email Tag Analysis
-    safer_e_risk: ChoiceColumn({
-      label: 'SAFER E - External Email Tag Risk Level',
-      dropdown: 'dropdown_with_none',
-      active: true,
-      choices: {
-        high: { label: 'HIGH', sequence: 0 },
-        medium: { label: 'MEDIUM', sequence: 1 },
-        low: { label: 'LOW', sequence: 2 }
-      }
-    }),
-    
-    safer_e_notes: StringColumn({
-      label: 'SAFER E - External Email Tag Analysis Notes',
-      maxLength: 1000,
-      active: true
-    }),
+        // === ORIGINAL EMAIL INFORMATION ===
+        // The suspicious email being analyzed
+        email_record: ReferenceColumn({ 
+            label: 'Email', 
+            referenceTable: 'sys_email',
+            hint: 'Reference to the original suspicious email record'
+        }),
+        email_subject: StringColumn({ 
+            label: 'Email Subject', 
+            maxLength: 500,
+            hint: 'Subject line of the suspicious email'
+        }),
+        sender_email: StringColumn({ 
+            label: 'Sender Email', 
+            maxLength: 255,
+            hint: 'Email address of the suspicious sender'
+        }),
+        sender_display_name: StringColumn({ 
+            label: 'Sender Display Name', 
+            maxLength: 255,
+            hint: 'Display name shown for the sender'
+        }),
+        sender_domain: StringColumn({ 
+            label: 'Sender Domain', 
+            maxLength: 255,
+            hint: 'Domain extracted from sender email address'
+        }),
+        email_received_date: DateColumn({ 
+            label: 'Email Received Date',
+            hint: 'When the suspicious email was originally received'
+        }),
+        email_body: StringColumn({ 
+            label: 'Email Body', 
+            maxLength: 8000,
+            hint: 'Content/body of the suspicious email'
+        }),
 
-    // ==================== OVERALL RESULT FIELDS ====================
-    
-    safer_overall_score: ChoiceColumn({
-      label: 'SAFER Overall Risk Score',
-      dropdown: 'dropdown_with_none',
-      mandatory: true,
-      active: true,
-      choices: {
-        high: { label: 'HIGH', sequence: 0 },
-        medium: { label: 'MEDIUM', sequence: 1 },
-        low: { label: 'LOW', sequence: 2 }
-      }
-    }),
-    
-    safer_summary: StringColumn({
-      label: 'SAFER Analysis Summary',
-      maxLength: 4000,
-      active: true
-    }),
-    
-    analysis_run_date: DateTimeColumn({
-      label: 'Analysis Run Date',
-      default: 'javascript:gs.nowDateTime()',
-      active: true
-    }),
-    
-    flow_execution_id: StringColumn({
-      label: 'Flow Execution ID',
-      maxLength: 255,
-      active: true
-    }),
+        // === SAFER ANALYSIS RESULTS ===
+        // Comprehensive security assessment using SAFER framework
+        safer_score: IntegerColumn({ 
+            label: 'SAFER Score',
+            hint: 'Overall security risk score (0-100)'
+        }),
 
-    // ==================== DISPOSITION FIELDS ====================
-    
-    disposition: ChoiceColumn({
-      label: 'Disposition',
-      dropdown: 'dropdown_without_none',
-      default: 'under_review',
-      mandatory: true,
-      active: true,
-      choices: {
-        confirmed_phish: { label: 'Confirmed Phish', sequence: 0 },
-        false_positive: { label: 'False Positive', sequence: 1 },
-        under_review: { label: 'Under Review', sequence: 2 },
-        escalated: { label: 'Escalated', sequence: 3 }
-      }
-    }),
-    
-    security_team_notified: BooleanColumn({
-      label: 'Security Team Notified',
-      default: false,
-      active: true
-    }),
-    
-    reviewed_by: ReferenceColumn({
-      label: 'Reviewed By',
-      referenceTable: 'sys_user',
-      active: true
-    }),
-    
-    review_notes: StringColumn({
-      label: 'Review Notes',
-      maxLength: 2000,
-      active: true
-    })
-  }
+        // S - Sender Analysis
+        sender_reputation: StringColumn({ 
+            label: 'Sender Reputation', 
+            maxLength: 50,
+            choices: {
+                trusted: { label: 'Trusted', sequence: 0 },
+                unknown: { label: 'Unknown', sequence: 1 },
+                suspicious: { label: 'Suspicious', sequence: 2 },
+                malicious: { label: 'Malicious', sequence: 3 }
+            },
+            hint: 'Assessment of sender trustworthiness'
+        }),
+        sender_score: IntegerColumn({ 
+            label: 'Sender Score (S)',
+            hint: 'Sender analysis component score'
+        }),
+
+        // A - Attachment Analysis  
+        attachment_risk: StringColumn({ 
+            label: 'Attachment Risk', 
+            maxLength: 50,
+            choices: {
+                none: { label: 'No Attachments', sequence: 0 },
+                safe: { label: 'Safe', sequence: 1 },
+                suspicious: { label: 'Suspicious', sequence: 2 },
+                dangerous: { label: 'Dangerous', sequence: 3 }
+            },
+            hint: 'Risk level of email attachments'
+        }),
+        attachment_score: IntegerColumn({ 
+            label: 'Attachment Score (A)',
+            hint: 'Attachment analysis component score'
+        }),
+
+        // F - Features Analysis (Email characteristics)
+        features_risk: StringColumn({ 
+            label: 'Features Risk', 
+            maxLength: 50,
+            choices: {
+                normal: { label: 'Normal', sequence: 0 },
+                suspicious: { label: 'Suspicious', sequence: 1 },
+                highly_suspicious: { label: 'Highly Suspicious', sequence: 2 }
+            },
+            hint: 'Risk based on email features and characteristics'
+        }),
+        features_score: IntegerColumn({ 
+            label: 'Features Score (F)',
+            hint: 'Email features analysis component score'
+        }),
+
+        // E - External Links Analysis
+        external_links_risk: StringColumn({ 
+            label: 'External Links Risk', 
+            maxLength: 50,
+            choices: {
+                none: { label: 'No External Links', sequence: 0 },
+                safe: { label: 'Safe', sequence: 1 },
+                suspicious: { label: 'Suspicious', sequence: 2 },
+                malicious: { label: 'Malicious', sequence: 3 }
+            },
+            hint: 'Risk level of external links in email'
+        }),
+        external_links_score: IntegerColumn({ 
+            label: 'External Links Score (E)',
+            hint: 'External links analysis component score'
+        }),
+
+        // R - Recipient Analysis
+        recipient_targeting: StringColumn({ 
+            label: 'Recipient Targeting', 
+            maxLength: 50,
+            choices: {
+                mass: { label: 'Mass Distribution', sequence: 0 },
+                targeted: { label: 'Targeted', sequence: 1 },
+                spear_phishing: { label: 'Spear Phishing', sequence: 2 }
+            },
+            hint: 'Type of targeting used in the email'
+        }),
+        recipient_score: IntegerColumn({ 
+            label: 'Recipient Score (R)',
+            hint: 'Recipient targeting analysis component score'
+        }),
+
+        // === ASSESSMENT RESULTS ===
+        threat_level: StringColumn({ 
+            label: 'Threat Level', 
+            maxLength: 50,
+            choices: {
+                safe: { label: 'Safe', sequence: 0 },
+                low: { label: 'Low Risk', sequence: 1 },
+                medium: { label: 'Medium Risk', sequence: 2 },
+                high: { label: 'High Risk', sequence: 3 },
+                critical: { label: 'Critical Risk', sequence: 4 }
+            },
+            hint: 'Overall threat assessment level'
+        }),
+
+        is_phishing: BooleanColumn({ 
+            label: 'Is Phishing',
+            hint: 'Determined to be a phishing attempt'
+        }),
+
+        confidence_level: StringColumn({ 
+            label: 'Confidence Level', 
+            maxLength: 50,
+            choices: {
+                low: { label: 'Low Confidence', sequence: 0 },
+                medium: { label: 'Medium Confidence', sequence: 1 },
+                high: { label: 'High Confidence', sequence: 2 },
+                very_high: { label: 'Very High Confidence', sequence: 3 }
+            },
+            hint: 'Confidence in the assessment results'
+        }),
+
+        // === WORKFLOW STATUS ===
+        assessment_status: StringColumn({ 
+            label: 'Assessment Status', 
+            maxLength: 50,
+            choices: {
+                pending: { label: 'Pending Analysis', sequence: 0 },
+                analyzing: { label: 'Analyzing', sequence: 1 },
+                completed: { label: 'Analysis Complete', sequence: 2 },
+                reviewed: { label: 'Security Reviewed', sequence: 3 },
+                closed: { label: 'Closed', sequence: 4 }
+            },
+            defaultValue: 'pending',
+            hint: 'Current status of the phishing assessment'
+        }),
+
+        security_action_taken: StringColumn({ 
+            label: 'Security Action Taken', 
+            maxLength: 100,
+            choices: {
+                none: { label: 'No Action Required', sequence: 0 },
+                quarantine: { label: 'Email Quarantined', sequence: 1 },
+                block_sender: { label: 'Sender Blocked', sequence: 2 },
+                user_training: { label: 'User Training Scheduled', sequence: 3 },
+                investigation: { label: 'Further Investigation', sequence: 4 }
+            },
+            hint: 'Action taken by security team'
+        }),
+
+        analysis_notes: StringColumn({ 
+            label: 'Analysis Notes', 
+            maxLength: 4000,
+            hint: 'Detailed notes from the security analysis'
+        }),
+
+        processed_date: DateColumn({ 
+            label: 'Processed Date',
+            hint: 'When the assessment was completed'
+        })
+    }
 })
