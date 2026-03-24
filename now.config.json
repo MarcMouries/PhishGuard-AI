@@ -1,5 +1,8 @@
 {
     "scope": "x_snc_phishguard",
     "scopeId": "4d3cde963b221e104a422254c3e45ac6",
-    "name": "PhishGuard AI"
+    "name": "PhishGuard AI",
+    "licensing": {
+        "enforceLicense": "none"
+    }
 }

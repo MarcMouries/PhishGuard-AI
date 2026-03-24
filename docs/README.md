@@ -100,9 +100,9 @@ The SAFER framework provides a systematic approach to phishing email analysis:
 ## **📊 CURRENT TABLE STRUCTURE** - Phish Assessment ✅
 
 ### **🔄 Forwarded Email Metadata (4 fields)** - **IMPLEMENTED**
-1. `forwarded_email_record` (Reference → sys_email) - The email sent to isthissafe@service-now.com ✅
+1. `forwarded_email_record` (Reference → sys_email) - The email sent to security team ✅
 2. `forwarded_email_date` (Date/Time) - When the forwarded email was received ✅
-3. `reported_by` (Reference → sys_user) - ServiceNow employee who reported it ✅
+3. `reported_by` (Reference → sys_user) - Company employee who reported it ✅
 4. `reporter_email_address` (String, 255) - Email address of the reporting employee ✅
 
 ### **📧 Original Email Metadata (6 fields)** - **IMPLEMENTED**  
@@ -273,8 +273,8 @@ The **x_snc_phishguard_assessment** table implements a comprehensive phishing an
 
 **PhishGuard AI** handles the following email reporting scenario:
 
-1. **📬 Employee Receives Suspicious Email** - ServiceNow employee gets a potentially malicious email
-2. **🔄 Employee Forwards Email** - Employee forwards the suspicious email to `isthissafe@service-now.com`
+1. **📬 Employee Receives Suspicious Email** - Company employee gets a potentially malicious email
+2. **🔄 Employee Forwards Email** - Employee forwards the suspicious email to the designated security email address
 3. **⚡ Flow Triggers** - Our flow processes the forwarded email
 4. **🔍 Analysis Creates Assessment** - System extracts both forwarded and original email data
 5. **📊 Record Stored** - Comprehensive assessment record created for review
@@ -284,8 +284,8 @@ The **x_snc_phishguard_assessment** table implements a comprehensive phishing an
 We distinguish between **two different emails**:
 
 #### **🔄 Forwarded Email** (Triggers our flow)
-- **From**: ServiceNow employee (`john.doe@service-now.com`)
-- **To**: `isthissafe@service-now.com`  
+- **From**: Company employee (`john.doe@company.com`)
+- **To**: Security team email (`security-reports@company.com`)  
 - **Subject**: "Fwd: Urgent! Your account will be suspended"
 - **Body**: Contains the original suspicious email
 
@@ -300,10 +300,10 @@ We distinguish between **two different emails**:
 The existing **"Email processing"** flow provides access to the **forwarded email data**. We need to extract the **original suspicious email** data from within it.
 
 #### **📧 Available Flow Input Data (Forwarded Email):**
-1. **`from_address`** (String) - **Reporter's** email address (ServiceNow employee)
+1. **`from_address`** (String) - **Reporter's** email address (company employee)
 2. **`subject`** (String) - Forwarded email subject (e.g., "Fwd: Urgent! Account suspended")  
 3. **`body_text`** (String) - **Contains the original suspicious email content**
-4. **`user`** (Reference to sys_user) - ServiceNow employee who reported it
+4. **`user`** (Reference to sys_user) - Company employee who reported it
 5. **`target_table_name`** (String) - Target table name
 6. **`target_record`** (String) - Target record reference  
 7. **`inbound_email`** (Reference to sys_email) - **The forwarded email record**
@@ -403,12 +403,12 @@ reporter_email_address = Trigger - Inbound Email → From address
 
 ##### **🎯 Original Suspicious Email Fields:**
 ```
-suspicious_email_subject = Data → Flow Variables → suspicious_email_data.suspicious_subject
-suspicious_sender_email = Data → Flow Variables → suspicious_email_data.suspicious_sender  
-suspicious_sender_display_name = Data → Flow Variables → suspicious_email_data.suspicious_sender_display
-suspicious_sender_domain = Data → Flow Variables → suspicious_email_data.suspicious_sender_domain
-suspicious_email_body = Data → Flow Variables → suspicious_email_data.suspicious_body
-suspicious_email_received_date = Data → Flow Variables → suspicious_email_data.suspicious_received_date
+email_subject = Data → Flow Variables → suspicious_email_data.suspicious_subject
+sender_email = Data → Flow Variables → suspicious_email_data.suspicious_sender  
+sender_display_name = Data → Flow Variables → suspicious_email_data.suspicious_sender_display
+sender_domain = Data → Flow Variables → suspicious_email_data.suspicious_sender_domain
+email_body = Data → Flow Variables → suspicious_email_data.suspicious_body
+email_received_date = Data → Flow Variables → suspicious_email_data.suspicious_received_date
 ```
 
 ##### **🔍 SAFER Framework (Default Values):**
@@ -469,9 +469,9 @@ function parseForwardedEmail(emailBody) {
 #### **Step 7: Save, Activate & Test**
 1. **Save** all flow changes
 2. **Activate** the updated flow  
-3. **Test** by forwarding a suspicious email to `isthissafe@service-now.com`
+3. **Test** by forwarding a suspicious email to your designated security team email
 4. **Verify** the assessment record contains both:
-   - ✅ **Reporter information** (ServiceNow employee)
+   - ✅ **Reporter information** (company employee)
    - ✅ **Suspicious email details** (original phishing attempt)
 
 ### **Expected Complete Data Flow** 🔄
@@ -479,7 +479,7 @@ function parseForwardedEmail(emailBody) {
 ```mermaid
 graph TD
     A[🎭 Phisher sends malicious email] --> B[📬 Employee receives suspicious email]
-    B --> C[🔄 Employee forwards to isthissafe@service-now.com]
+    B --> C[🔄 Employee forwards to security team email]
     C --> D[⚡ PhishGuard AI Flow Triggered]
     D --> E[📝 Log forwarded email]
     E --> F[🔍 Parse & Extract original email data]
