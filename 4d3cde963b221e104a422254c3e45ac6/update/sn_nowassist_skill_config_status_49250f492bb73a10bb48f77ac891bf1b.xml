@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_nowassist_skill_config_status">
+    <sn_nowassist_skill_config_status action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <in_mobile_active>false</in_mobile_active>
+        <in_mobile_roles/>
+        <in_product_active>true</in_product_active>
+        <in_product_roles/>
+        <skill_config display_value="Client Script Summarization">1d92c7f59f16521078a8c1ce0a0a1c6d</skill_config>
+        <sys_class_name>sn_nowassist_skill_config_status</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-21 19:51:50</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>49250f492bb73a10bb48f77ac891bf1b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="PhishGuard AI" source="x_snc_phishguardai">4d3cde963b221e104a422254c3e45ac6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_update_name>sn_nowassist_skill_config_status_49250f492bb73a10bb48f77ac891bf1b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-21 19:51:50</sys_updated_on>
+    </sn_nowassist_skill_config_status>
+</record_update>

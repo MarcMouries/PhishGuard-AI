@@ -1,0 +1,1891 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,timeFromCreateToActivate=19238883000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>9a41b6c2ff12101088e94ee9453bf1a4</copied_from>
+        <copied_from_name>FlowTemplate_Empty</copied_from_name>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority/>
+        <generation_source/>
+        <internal_name>email_processing</internal_name>
+        <label_cache>[{"name":"Inbound Email_1.from_address","label":"Trigger - Inbound Email➛From address","type":"string_full_utf8","base_type":"string_full_utf8","usedInstances":{"557e1121-97bd-4b47-a19e-906fd434d9a3":["ah_to"]},"attributes":{"test_input_hidden":"true"}},{"name":"Inbound Email_1.subject","label":"Trigger - Inbound Email➛Subject","type":"string_full_utf8","base_type":"string_full_utf8","usedInstances":{"946ff246-7f9b-473d-802b-148de0b97464":["log_message"],"557e1121-97bd-4b47-a19e-906fd434d9a3":[null]},"attributes":{"test_input_hidden":"true"}},{"name":"Inbound Email_1.inbound_email","label":"Trigger - Inbound Email➛Email Record","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","usedInstances":{"557e1121-97bd-4b47-a19e-906fd434d9a3":["record"]},"attributes":{}}]</label_cache>
+        <master_snapshot>ba3381323b83d6104a422254c3e45a18</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Email processing</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>c33381323b83d6104a422254c3e45a83</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:23:46</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8f8efc363bcb9610186bc4d355e45ad5</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Email processing</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="PhishGuard AI" source="x_snc_phishguardai">4d3cde963b221e104a422254c3e45ac6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_update_name>sys_hub_flow_8f8efc363bcb9610186bc4d355e45ad5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-26 14:31:53</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>8e15cb492bb73a10bb48f77ac891bf6a</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=8f8efc363bcb9610186bc4d355e45ad5"/>
+    <sys_variable_value action="delete_multiple" query="document_key=8f8efc363bcb9610186bc4d355e45ad5"/>
+    <sys_flow_email_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <email_conditions table="sys_email">^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </email_conditions>
+        <event_name>email.read</event_name>
+        <name/>
+        <order/>
+        <published_version/>
+        <stop_condition_evaluation>true</stop_condition_evaluation>
+        <sys_class_name>sys_flow_email_trigger</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:15</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c33381323b83d6104a422254c3e45a83</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-26 14:31:53</sys_updated_on>
+        <target_table/>
+        <trigger_definition/>
+    </sys_flow_email_trigger>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=8f8efc363bcb9610186bc4d355e45ad5"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=8f8efc363bcb9610186bc4d355e45ad5"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=8f8efc363bcb9610186bc4d355e45ad5^sys_idNOT IN878efc363bcb9610186bc4d355e45ad8"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>8f8efc363bcb9610186bc4d355e45ad5</id>
+        <name>Email processing</name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:23:46</sys_created_on>
+        <sys_id>878efc363bcb9610186bc4d355e45ad8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Marc.Mouries</sys_updated_by>
+        <sys_updated_on>2025-01-15 21:23:46</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=878efc363bcb9610186bc4d355e45ad8"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=8f8efc363bcb9610186bc4d355e45ad5^sys_idNOT IN0d3301323b83d6104a422254c3e45a6c,813301323b83d6104a422254c3e45a66,853301323b83d6104a422254c3e45a5c,853301323b83d6104a422254c3e45a69,893301323b83d6104a422254c3e45a5f,8d3301323b83d6104a422254c3e45a62,cd334dfe3b43d6104a422254c3e45a29"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=string_full_utf8,uiTypeLabel=String (Full UTF-8)</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>from_address</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <label>From address</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Email processing">8f8efc363bcb9610186bc4d355e45ad5</model>
+        <model_id>8f8efc363bcb9610186bc4d355e45ad5</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_8f8efc363bcb9610186bc4d355e45ad5</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:07</sys_created_on>
+        <sys_id>0d3301323b83d6104a422254c3e45a6c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Marc.Mouries</sys_updated_by>
+        <sys_updated_on>2025-01-15 21:44:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=0d3301323b83d6104a422254c3e45a6c"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=reference,uiTypeLabel=Reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>user</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>User</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Email processing">8f8efc363bcb9610186bc4d355e45ad5</model>
+        <model_id>8f8efc363bcb9610186bc4d355e45ad5</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_8f8efc363bcb9610186bc4d355e45ad5</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sys_user">sys_user</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:07</sys_created_on>
+        <sys_id>813301323b83d6104a422254c3e45a66</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Marc.Mouries</sys_updated_by>
+        <sys_updated_on>2025-01-15 21:44:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=813301323b83d6104a422254c3e45a66"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>target_table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Target Table</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Email processing">8f8efc363bcb9610186bc4d355e45ad5</model>
+        <model_id>8f8efc363bcb9610186bc4d355e45ad5</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_8f8efc363bcb9610186bc4d355e45ad5</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:07</sys_created_on>
+        <sys_id>853301323b83d6104a422254c3e45a5c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Marc.Mouries</sys_updated_by>
+        <sys_updated_on>2025-01-15 21:44:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=853301323b83d6104a422254c3e45a5c"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>target_table_name</dependent>
+        <dependent_on_field>target_table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>target_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Target Record</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Email processing">8f8efc363bcb9610186bc4d355e45ad5</model>
+        <model_id>8f8efc363bcb9610186bc4d355e45ad5</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_8f8efc363bcb9610186bc4d355e45ad5</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:07</sys_created_on>
+        <sys_id>853301323b83d6104a422254c3e45a69</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Marc.Mouries</sys_updated_by>
+        <sys_updated_on>2025-01-15 21:44:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=853301323b83d6104a422254c3e45a69"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=string_full_utf8,uiTypeLabel=String (Full UTF-8)</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>body_text</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <label>Body Text</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Email processing">8f8efc363bcb9610186bc4d355e45ad5</model>
+        <model_id>8f8efc363bcb9610186bc4d355e45ad5</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_8f8efc363bcb9610186bc4d355e45ad5</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:07</sys_created_on>
+        <sys_id>893301323b83d6104a422254c3e45a5f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Marc.Mouries</sys_updated_by>
+        <sys_updated_on>2025-01-15 21:44:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=893301323b83d6104a422254c3e45a5f"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=string_full_utf8,uiTypeLabel=String (Full UTF-8)</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>subject</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <label>Subject</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Email processing">8f8efc363bcb9610186bc4d355e45ad5</model>
+        <model_id>8f8efc363bcb9610186bc4d355e45ad5</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_8f8efc363bcb9610186bc4d355e45ad5</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:07</sys_created_on>
+        <sys_id>8d3301323b83d6104a422254c3e45a62</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Marc.Mouries</sys_updated_by>
+        <sys_updated_on>2025-01-15 21:44:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=8d3301323b83d6104a422254c3e45a62"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>inbound_email</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Inbound Email</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Email processing">8f8efc363bcb9610186bc4d355e45ad5</model>
+        <model_id>8f8efc363bcb9610186bc4d355e45ad5</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_8f8efc363bcb9610186bc4d355e45ad5</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sys_email">sys_email</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual>type=received^sys_created_onONLast 3 months@javascript:gs.beginningOfLast3Months()@javascript:gs.endOfLast3Months()^EQ</reference_qual>
+        <reference_qual_condition table="sys_email">type=received^sys_created_onONLast 3 months@javascript:gs.beginningOfLast3Months()@javascript:gs.endOfLast3Months()^EQ<item display_value="received" endquery="false" field="type" goto="false" newquery="false" operator="=" or="false" value="received"/>
+            <item endquery="false" field="sys_created_on" goto="false" newquery="false" operator="ON" or="false" value="Last 3 months@javascript:gs.beginningOfLast3Months()@javascript:gs.endOfLast3Months()"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </reference_qual_condition>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:06</sys_created_on>
+        <sys_id>cd334dfe3b43d6104a422254c3e45a29</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Marc.Mouries</sys_updated_by>
+        <sys_updated_on>2025-01-15 21:44:06</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=cd334dfe3b43d6104a422254c3e45a29"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=8f8efc363bcb9610186bc4d355e45ad5"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=8f8efc363bcb9610186bc4d355e45ad5"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=8f8efc363bcb9610186bc4d355e45ad5^sys_idNOT IN513301323b83d6104a422254c3e45aae"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Email processing">8f8efc363bcb9610186bc4d355e45ad5</flow>
+        <generation_source/>
+        <name>Inbound Email</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:07</sys_created_on>
+        <sys_id>513301323b83d6104a422254c3e45aae</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-26 14:05:06</sys_updated_on>
+        <trigger_definition display_value="Inbound Email">6f0180400b320300f4eb8bf637673ad4</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9WW32+bMBDH/xWL52yCQJs0b9PWSXtZtbbaHqoWGXMES47NbJOUVf3fdzYhIT8aLc2kdS+RfHfcj+99MLl7CgTNQAST4HJGuSBMyZxbrqQJBgGXFrSk4rapACM2fDMqc2qVboJJQYWBQVBoNbuFWSWohZVR6Rx0MInCcBDMqajhpjFfckyGKSSdubTgCqcbyX0kuh4uv+Ep5waTNt+XRrRUVOOz1mV+CljJRa5BBpO7e+zZJY/GYRTGyYiN4mgYh2GRQEajZHhGL0bncTHCFAfGfrkvu0eI/oTwaEHmkK/G31VJA82vpFgbSlQZc35c5SRWkZ81FbxoyKLkrCS+E0OMpdqSRtWaFEIt3vstPBr+C3tKQldfQwGoBHNNmsak/sGgZ0+XWnaDo4+VijO4qlztVl1LM7EUmilRz+TXVhC3CihoLWxvFbXBpFC5sd0cHQs3pVpcd1U/c+k1WjqFYlSsTtRazbPagvHL7GRIsxrX6p4K5sPg2c+QOlm6RpYl07ZrDDBM88p+YJbPO/6eB2u+r/yedqB2x6l3HEf08ADRallqvpbpeIbPwywOkeD9DI+gx3A32lZ5uz1hv/UTUL0tgVSaK81tQ6aotnTIWrTiJqdYiqi5+0GLJlxmqpZ5y3AXYLbY3ST3BWDfHKtzbnhb3bv/BqQ3VlWorWJgDJfTXVwzpQRQeTSu8QFcDRZd33MpuDDqJV4jHL2KYSQ3Gb/IcNFneHfyP+jObovSn/YEwn+Ujmldw6BrCQxRGOgpd5cvWXBb+hMewNh3Xiji6/8DuF2va+unzUUtnW+f/muoUOJrYCgj8cDv8O8lST0ax74CyYFXAL+sU7BpK/iJF3d2ESH0yfgsjmIHPWQjFlL8S3KeszjJznrQ7xt4f0d2z/j9uU68zn1eogpPtG77ocYoxlHIfA07l0zN8PXEGNe5v9Q3cB//n3f5a+G9/w0k51asQQsAAA==</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>email</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=8f8efc363bcb9610186bc4d355e45ad5^sys_idNOT IN1d3301323b83d6104a422254c3e45aaf,508be9b83b4aaa10dad4839a04e45a03"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Log">5bc1bcc6531003003bf1d9109ec587d4</action_type>
+        <action_type_parent display_value="Log">0e0ae8c2531003003bf1d9109ec587c8</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>5bc1bcc6531003003bf1d9109ec587d4</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Email processing">8f8efc363bcb9610186bc4d355e45ad5</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:07</sys_created_on>
+        <sys_id>1d3301323b83d6104a422254c3e45aaf</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_updated_by>Marc.Mouries</sys_updated_by>
+        <sys_updated_on>2025-08-26 14:33:47</sys_updated_on>
+        <ui_id>946ff246-7f9b-473d-802b-148de0b97464</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VUTW/iMBD9K8hnQASa7ZbTrqCVKvVDKlL30FaRY0/AK8fO2g6UjfjvO04MZClagdTbSrnMy7Nn3vjNvFREcDImccqilLEv8SgaDEb4pVnEr6LBFbD46yW/JF2iaA7IlHqeSFiCRGhJZekxoTKNIRe2kHT9HNDbBmULIbkBRcYvb11SUIP3ODBkXB38OrUQSVPMPiZ3oYojhbl14SG20IJBiO/CsckW1Ib7MgZdAu8OFAfMn1FpoUtyqjh12qx3iAHKH5XcAwuhHN5GPPndit+Y72LgeRmgIgbNv12YhOY0cDaljs6cKZkrTaA2xVrsRbWT2Ot1HrSCTq/X6nar9E13zw3tPniTwIzazB/UKKHmLfIKkT152CZfG6NNiwohDtzRBl+OQ0ZL6SbnK4hOVjA8R8HoDAUXXkHT/MfCCY1uJJH3DE3l9mm0LHP10PiM7PQ+H9i/QadHp6C0aAEovM28b4KJstlCr562HrkRqq4o/JSaUbmLqHNGpKXz/a0ISMjxoiSnRYGNSAqjl6I+jMXm/bnEoJ9JvcKkVsxVnzIvrY+upv0bxKc1/EyN8DLv8Ro8vOkSu7YTSa3di0ULJ79KX0kjPWhI6kbVR5gRhfuOCZYQyvXtr8d5OPrXOEP89/jmYC2dQ+utvj0BA7yXdyCnQnbGr6qqblWqS8U71x5Kor4t05/A3GbzcQedff68bXWCvK0L73fajgoOG8viI9e+bm+s2RbcDs2nbaxhHH/Oyjq2BD6O1VlT9f8Nzdsfsa9tT44HAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=1d3301323b83d6104a422254c3e45aaf"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Email processing">8f8efc363bcb9610186bc4d355e45ad5</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-06-07 22:40:42</sys_created_on>
+        <sys_id>508be9b83b4aaa10dad4839a04e45a03</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_updated_by>Marc.Mouries</sys_updated_by>
+        <sys_updated_on>2026-03-20 15:16:27</sys_updated_on>
+        <ui_id>557e1121-97bd-4b47-a19e-906fd434d9a3</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=508be9b83b4aaa10dad4839a04e45a03"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=8f8efc363bcb9610186bc4d355e45ad5"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=8f8efc363bcb9610186bc4d355e45ad5"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=8f8efc363bcb9610186bc4d355e45ad5^sys_idNOT IN6fa4ffda3bab2210dad4839a04e45a6f"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>8f8efc363bcb9610186bc4d355e45ad5</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Inbound Email_1.subject}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-26 14:05:06</sys_created_on>
+        <sys_id>6fa4ffda3bab2210dad4839a04e45a6f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-26 14:05:06</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>3f204e2f-08c1-4f4d-ba1c-e323f04d58f1</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=8f8efc363bcb9610186bc4d355e45ad5"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>from_address</element>
+        <help/>
+        <hint/>
+        <label>From address</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_8f8efc363bcb9610186bc4d355e45ad5</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:07</sys_created_on>
+        <sys_id>013301323b83d6104a422254c3e45a6f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="PhishGuard AI" source="x_snc_phishguardai">4d3cde963b221e104a422254c3e45ac6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Marc.Mouries</sys_updated_by>
+        <sys_updated_on>2025-01-15 21:44:07</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>target_record</element>
+        <help/>
+        <hint/>
+        <label>Target Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_8f8efc363bcb9610186bc4d355e45ad5</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:07</sys_created_on>
+        <sys_id>0d3301323b83d6104a422254c3e45a6b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="PhishGuard AI" source="x_snc_phishguardai">4d3cde963b221e104a422254c3e45ac6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Marc.Mouries</sys_updated_by>
+        <sys_updated_on>2025-01-15 21:44:07</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>subject</element>
+        <help/>
+        <hint/>
+        <label>Subject</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_8f8efc363bcb9610186bc4d355e45ad5</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:07</sys_created_on>
+        <sys_id>813301323b83d6104a422254c3e45a65</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="PhishGuard AI" source="x_snc_phishguardai">4d3cde963b221e104a422254c3e45ac6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Marc.Mouries</sys_updated_by>
+        <sys_updated_on>2025-01-15 21:44:07</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>user</element>
+        <help/>
+        <hint/>
+        <label>User</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_8f8efc363bcb9610186bc4d355e45ad5</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:07</sys_created_on>
+        <sys_id>853301323b83d6104a422254c3e45a68</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="PhishGuard AI" source="x_snc_phishguardai">4d3cde963b221e104a422254c3e45ac6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Marc.Mouries</sys_updated_by>
+        <sys_updated_on>2025-01-15 21:44:07</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>target_table_name</element>
+        <help/>
+        <hint/>
+        <label>Target Table</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_8f8efc363bcb9610186bc4d355e45ad5</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:07</sys_created_on>
+        <sys_id>893301323b83d6104a422254c3e45a5e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="PhishGuard AI" source="x_snc_phishguardai">4d3cde963b221e104a422254c3e45ac6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Marc.Mouries</sys_updated_by>
+        <sys_updated_on>2025-01-15 21:44:07</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>body_text</element>
+        <help/>
+        <hint/>
+        <label>Body Text</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_8f8efc363bcb9610186bc4d355e45ad5</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:07</sys_created_on>
+        <sys_id>8d3301323b83d6104a422254c3e45a61</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="PhishGuard AI" source="x_snc_phishguardai">4d3cde963b221e104a422254c3e45ac6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Marc.Mouries</sys_updated_by>
+        <sys_updated_on>2025-01-15 21:44:07</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>inbound_email</element>
+        <help/>
+        <hint>The record representing the inbound email.</hint>
+        <label>Inbound Email</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_8f8efc363bcb9610186bc4d355e45ad5</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:06</sys_created_on>
+        <sys_id>cd3301323b83d6104a422254c3e45a5a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="PhishGuard AI" source="x_snc_phishguardai">4d3cde963b221e104a422254c3e45ac6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Marc.Mouries</sys_updated_by>
+        <sys_updated_on>2025-01-15 21:44:06</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_8f8efc363bcb9610186bc4d355e45ad5"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_8f8efc363bcb9610186bc4d355e45ad5"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=integrated,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>9a41b6c2ff12101088e94ee9453bf1a4</copied_from>
+        <copied_from_name/>
+        <description/>
+        <flow_priority/>
+        <internal_name>email_processing</internal_name>
+        <label_cache>[{"name":"Inbound Email_1.from_address","label":"Trigger - Inbound Email➛From address","type":"string_full_utf8","base_type":"string_full_utf8","usedInstances":{"557e1121-97bd-4b47-a19e-906fd434d9a3":["ah_to"]},"attributes":{"test_input_hidden":"true"}},{"name":"Inbound Email_1.subject","label":"Trigger - Inbound Email➛Subject","type":"string_full_utf8","base_type":"string_full_utf8","usedInstances":{"946ff246-7f9b-473d-802b-148de0b97464":["log_message"],"557e1121-97bd-4b47-a19e-906fd434d9a3":[null]},"attributes":{"test_input_hidden":"true"}},{"name":"Inbound Email_1.inbound_email","label":"Trigger - Inbound Email➛Email Record","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","usedInstances":{"557e1121-97bd-4b47-a19e-906fd434d9a3":["record"]},"attributes":{}}]</label_cache>
+        <master>true</master>
+        <name>Email processing</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Email processing">8f8efc363bcb9610186bc4d355e45ad5</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ba3381323b83d6104a422254c3e45a18</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-26 14:31:53</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=ba3381323b83d6104a422254c3e45a18"/>
+    <sys_variable_value action="delete_multiple" query="document_key=ba3381323b83d6104a422254c3e45a18"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=ba3381323b83d6104a422254c3e45a18"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=ba3381323b83d6104a422254c3e45a18^sys_idNOT IN723381323b83d6104a422254c3e45a1a"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>ba3381323b83d6104a422254c3e45a18</id>
+        <name>Email processing</name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:14</sys_created_on>
+        <sys_id>723381323b83d6104a422254c3e45a1a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Marc.Mouries</sys_updated_by>
+        <sys_updated_on>2025-01-15 21:44:14</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=723381323b83d6104a422254c3e45a1a"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=ba3381323b83d6104a422254c3e45a18^sys_idNOT IN033381323b83d6104a422254c3e45a2d,033381323b83d6104a422254c3e45a5b,433381323b83d6104a422254c3e45a26,b63381323b83d6104a422254c3e45a1b,c33381323b83d6104a422254c3e45a62,c73381323b83d6104a422254c3e45a40,c73381323b83d6104a422254c3e45a47"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=string_full_utf8</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>subject</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <label>Subject</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Email processing">ba3381323b83d6104a422254c3e45a18</model>
+        <model_id>ba3381323b83d6104a422254c3e45a18</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_ba3381323b83d6104a422254c3e45a18</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:14</sys_created_on>
+        <sys_id>033381323b83d6104a422254c3e45a2d</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-26 14:31:52</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=033381323b83d6104a422254c3e45a2d"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>user</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>User</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Email processing">ba3381323b83d6104a422254c3e45a18</model>
+        <model_id>ba3381323b83d6104a422254c3e45a18</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_ba3381323b83d6104a422254c3e45a18</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sys_user">sys_user</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:15</sys_created_on>
+        <sys_id>033381323b83d6104a422254c3e45a5b</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-26 14:31:52</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=033381323b83d6104a422254c3e45a5b"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=string_full_utf8</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>body_text</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <label>Body Text</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Email processing">ba3381323b83d6104a422254c3e45a18</model>
+        <model_id>ba3381323b83d6104a422254c3e45a18</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_ba3381323b83d6104a422254c3e45a18</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:14</sys_created_on>
+        <sys_id>433381323b83d6104a422254c3e45a26</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-26 14:31:52</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=433381323b83d6104a422254c3e45a26"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>target_table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Target Table</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Email processing">ba3381323b83d6104a422254c3e45a18</model>
+        <model_id>ba3381323b83d6104a422254c3e45a18</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_ba3381323b83d6104a422254c3e45a18</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:14</sys_created_on>
+        <sys_id>b63381323b83d6104a422254c3e45a1b</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-26 14:31:52</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=b63381323b83d6104a422254c3e45a1b"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>target_table_name</dependent>
+        <dependent_on_field>target_table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>target_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Target Record</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Email processing">ba3381323b83d6104a422254c3e45a18</model>
+        <model_id>ba3381323b83d6104a422254c3e45a18</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_ba3381323b83d6104a422254c3e45a18</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:15</sys_created_on>
+        <sys_id>c33381323b83d6104a422254c3e45a62</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-26 14:31:52</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c33381323b83d6104a422254c3e45a62"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>inbound_email</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Inbound Email</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Email processing">ba3381323b83d6104a422254c3e45a18</model>
+        <model_id>ba3381323b83d6104a422254c3e45a18</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_ba3381323b83d6104a422254c3e45a18</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sys_email">sys_email</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual>type=received^sys_created_onONLast 3 months@javascript:gs.beginningOfLast3Months()@javascript:gs.endOfLast3Months()^EQ</reference_qual>
+        <reference_qual_condition table="sys_email">type=received^sys_created_onONLast 3 months@javascript:gs.beginningOfLast3Months()@javascript:gs.endOfLast3Months()^EQ<item display_value="received" endquery="false" field="type" goto="false" newquery="false" operator="=" or="false" value="received"/>
+            <item endquery="false" field="sys_created_on" goto="false" newquery="false" operator="ON" or="false" value="Last 3 months@javascript:gs.beginningOfLast3Months()@javascript:gs.endOfLast3Months()"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </reference_qual_condition>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:14</sys_created_on>
+        <sys_id>c73381323b83d6104a422254c3e45a40</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-26 14:31:52</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c73381323b83d6104a422254c3e45a40"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=string_full_utf8</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>from_address</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <label>From address</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Email processing">ba3381323b83d6104a422254c3e45a18</model>
+        <model_id>ba3381323b83d6104a422254c3e45a18</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_ba3381323b83d6104a422254c3e45a18</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:15</sys_created_on>
+        <sys_id>c73381323b83d6104a422254c3e45a47</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-26 14:31:52</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c73381323b83d6104a422254c3e45a47"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=ba3381323b83d6104a422254c3e45a18"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=ba3381323b83d6104a422254c3e45a18"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=ba3381323b83d6104a422254c3e45a18^sys_idNOT INc33381323b83d6104a422254c3e45a6f"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Email processing">ba3381323b83d6104a422254c3e45a18</flow>
+        <generation_source/>
+        <name>Inbound Email</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:15</sys_created_on>
+        <sys_id>c33381323b83d6104a422254c3e45a6f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-26 14:31:52</sys_updated_on>
+        <trigger_definition display_value="Inbound Email">6f0180400b320300f4eb8bf637673ad4</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9WW32+bMBDH/xWL52yCQJs0b9PWSXtZtbbaHqoWGXMES47NbJOUVf3fdzYhIT8aLc2kdS+RfHfcj+99MLl7CgTNQAST4HJGuSBMyZxbrqQJBgGXFrSk4rapACM2fDMqc2qVboJJQYWBQVBoNbuFWSWohZVR6Rx0MInCcBDMqajhpjFfckyGKSSdubTgCqcbyX0kuh4uv+Ep5waTNt+XRrRUVOOz1mV+CljJRa5BBpO7e+zZJY/GYRTGyYiN4mgYh2GRQEajZHhGL0bncTHCFAfGfrkvu0eI/oTwaEHmkK/G31VJA82vpFgbSlQZc35c5SRWkZ81FbxoyKLkrCS+E0OMpdqSRtWaFEIt3vstPBr+C3tKQldfQwGoBHNNmsak/sGgZ0+XWnaDo4+VijO4qlztVl1LM7EUmilRz+TXVhC3CihoLWxvFbXBpFC5sd0cHQs3pVpcd1U/c+k1WjqFYlSsTtRazbPagvHL7GRIsxrX6p4K5sPg2c+QOlm6RpYl07ZrDDBM88p+YJbPO/6eB2u+r/yedqB2x6l3HEf08ADRallqvpbpeIbPwywOkeD9DI+gx3A32lZ5uz1hv/UTUL0tgVSaK81tQ6aotnTIWrTiJqdYiqi5+0GLJlxmqpZ5y3AXYLbY3ST3BWDfHKtzbnhb3bv/BqQ3VlWorWJgDJfTXVwzpQRQeTSu8QFcDRZd33MpuDDqJV4jHL2KYSQ3Gb/IcNFneHfyP+jObovSn/YEwn+Ujmldw6BrCQxRGOgpd5cvWXBb+hMewNh3Xiji6/8DuF2va+unzUUtnW+f/muoUOJrYCgj8cDv8O8lST0ax74CyYFXAL+sU7BpK/iJF3d2ESH0yfgsjmIHPWQjFlL8S3KeszjJznrQ7xt4f0d2z/j9uU68zn1eogpPtG77ocYoxlHIfA07l0zN8PXEGNe5v9Q3cB//n3f5a+G9/w0k51asQQsAAA==</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>email</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=ba3381323b83d6104a422254c3e45a18^sys_idNOT IN0f3381323b83d6104a422254c3e45a6e,4e8b2db83b4aaa10dad4839a04e45a30"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Log">5bc1bcc6531003003bf1d9109ec587d4</action_type>
+        <action_type_parent display_value="Log">0e0ae8c2531003003bf1d9109ec587c8</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>5bc1bcc6531003003bf1d9109ec587d4</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Email processing">ba3381323b83d6104a422254c3e45a18</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:15</sys_created_on>
+        <sys_id>0f3381323b83d6104a422254c3e45a6e</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_updated_by>Marc.Mouries</sys_updated_by>
+        <sys_updated_on>2025-06-07 14:59:32</sys_updated_on>
+        <ui_id>946ff246-7f9b-473d-802b-148de0b97464</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VUTW/iMBD9K8hnQASa7ZbTrqCVKvVDKlL30FaRY0/AK8fO2g6UjfjvO04MZClagdTbSrnMy7Nn3vjNvFREcDImccqilLEv8SgaDEb4pVnEr6LBFbD46yW/JF2iaA7IlHqeSFiCRGhJZekxoTKNIRe2kHT9HNDbBmULIbkBRcYvb11SUIP3ODBkXB38OrUQSVPMPiZ3oYojhbl14SG20IJBiO/CsckW1Ib7MgZdAu8OFAfMn1FpoUtyqjh12qx3iAHKH5XcAwuhHN5GPPndit+Y72LgeRmgIgbNv12YhOY0cDaljs6cKZkrTaA2xVrsRbWT2Ot1HrSCTq/X6nar9E13zw3tPniTwIzazB/UKKHmLfIKkT152CZfG6NNiwohDtzRBl+OQ0ZL6SbnK4hOVjA8R8HoDAUXXkHT/MfCCY1uJJH3DE3l9mm0LHP10PiM7PQ+H9i/QadHp6C0aAEovM28b4KJstlCr562HrkRqq4o/JSaUbmLqHNGpKXz/a0ISMjxoiSnRYGNSAqjl6I+jMXm/bnEoJ9JvcKkVsxVnzIvrY+upv0bxKc1/EyN8DLv8Ro8vOkSu7YTSa3di0ULJ79KX0kjPWhI6kbVR5gRhfuOCZYQyvXtr8d5OPrXOEP89/jmYC2dQ+utvj0BA7yXdyCnQnbGr6qqblWqS8U71x5Kor4t05/A3GbzcQedff68bXWCvK0L73fajgoOG8viI9e+bm+s2RbcDs2nbaxhHH/Oyjq2BD6O1VlT9f8Nzdsfsa9tT44HAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=0f3381323b83d6104a422254c3e45a6e"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Email processing">ba3381323b83d6104a422254c3e45a18</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-06-07 22:40:50</sys_created_on>
+        <sys_id>4e8b2db83b4aaa10dad4839a04e45a30</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-26 14:31:52</sys_updated_on>
+        <ui_id>557e1121-97bd-4b47-a19e-906fd434d9a3</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4e8b2db83b4aaa10dad4839a04e45a30"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=ba3381323b83d6104a422254c3e45a18"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=ba3381323b83d6104a422254c3e45a18"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=ba3381323b83d6104a422254c3e45a18^sys_idNOT INf3ca371a3beb2210dad4839a04e45aaa"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>ba3381323b83d6104a422254c3e45a18</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Inbound Email_1.subject}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-26 14:31:53</sys_created_on>
+        <sys_id>f3ca371a3beb2210dad4839a04e45aaa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-26 14:31:53</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>3f204e2f-08c1-4f4d-ba1c-e323f04d58f1</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=ba3381323b83d6104a422254c3e45a18"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>user</element>
+        <help/>
+        <hint/>
+        <label>User</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_ba3381323b83d6104a422254c3e45a18</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:15</sys_created_on>
+        <sys_id>4b3381323b83d6104a422254c3e45a5f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="PhishGuard AI" source="x_snc_phishguardai">4d3cde963b221e104a422254c3e45ac6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Marc.Mouries</sys_updated_by>
+        <sys_updated_on>2025-01-15 21:44:15</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>inbound_email</element>
+        <help/>
+        <hint>The record representing the inbound email.</hint>
+        <label>Inbound Email</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_ba3381323b83d6104a422254c3e45a18</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:14</sys_created_on>
+        <sys_id>4f3381323b83d6104a422254c3e45a44</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="PhishGuard AI" source="x_snc_phishguardai">4d3cde963b221e104a422254c3e45ac6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Marc.Mouries</sys_updated_by>
+        <sys_updated_on>2025-01-15 21:44:14</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>target_record</element>
+        <help/>
+        <hint/>
+        <label>Target Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_ba3381323b83d6104a422254c3e45a18</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:15</sys_created_on>
+        <sys_id>4f3381323b83d6104a422254c3e45a66</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="PhishGuard AI" source="x_snc_phishguardai">4d3cde963b221e104a422254c3e45ac6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Marc.Mouries</sys_updated_by>
+        <sys_updated_on>2025-01-15 21:44:15</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>body_text</element>
+        <help/>
+        <hint/>
+        <label>Body Text</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_ba3381323b83d6104a422254c3e45a18</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:14</sys_created_on>
+        <sys_id>873381323b83d6104a422254c3e45a2a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="PhishGuard AI" source="x_snc_phishguardai">4d3cde963b221e104a422254c3e45ac6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Marc.Mouries</sys_updated_by>
+        <sys_updated_on>2025-01-15 21:44:14</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>subject</element>
+        <help/>
+        <hint/>
+        <label>Subject</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_ba3381323b83d6104a422254c3e45a18</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:14</sys_created_on>
+        <sys_id>873381323b83d6104a422254c3e45a31</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="PhishGuard AI" source="x_snc_phishguardai">4d3cde963b221e104a422254c3e45ac6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Marc.Mouries</sys_updated_by>
+        <sys_updated_on>2025-01-15 21:44:14</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>from_address</element>
+        <help/>
+        <hint/>
+        <label>From address</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_ba3381323b83d6104a422254c3e45a18</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:15</sys_created_on>
+        <sys_id>873381323b83d6104a422254c3e45a58</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="PhishGuard AI" source="x_snc_phishguardai">4d3cde963b221e104a422254c3e45ac6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Marc.Mouries</sys_updated_by>
+        <sys_updated_on>2025-01-15 21:44:15</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>target_table_name</element>
+        <help/>
+        <hint/>
+        <label>Target Table</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_ba3381323b83d6104a422254c3e45a18</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:14</sys_created_on>
+        <sys_id>f63381323b83d6104a422254c3e45a23</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="PhishGuard AI" source="x_snc_phishguardai">4d3cde963b221e104a422254c3e45ac6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Marc.Mouries</sys_updated_by>
+        <sys_updated_on>2025-01-15 21:44:14</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_ba3381323b83d6104a422254c3e45a18"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_ba3381323b83d6104a422254c3e45a18"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>8f8efc363bcb9610186bc4d355e45ad5</sys_id>
+        <latest_snapshot>ba3381323b83d6104a422254c3e45a18</latest_snapshot>
+        <compiler_build>glide-zurich-07-01-2025__patch7-02-19-2026_03-04-2026_1012.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=8f8efc363bcb9610186bc4d355e45ad5^sys_idNOT INcb3381323b83d6104a422254c3e45a83"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"cb3381323b83d6104a422254c3e45a83","name":"plan","plan_signature":null}}</plan>
+        <plan_id>8f8efc363bcb9610186bc4d355e45ad5</plan_id>
+        <snapshot>c58c74742b773ed0bb48f77ac891bf08</snapshot>
+        <sys_created_by>Marc.Mouries</sys_created_by>
+        <sys_created_on>2025-01-15 21:44:15</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>cb3381323b83d6104a422254c3e45a83</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-26 14:31:53</sys_updated_on>
+        <trigger display_value="">c33381323b83d6104a422254c3e45a83</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=8f8efc363bcb9610186bc4d355e45ad5"/>
+</record_update>
