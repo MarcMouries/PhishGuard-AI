@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="from_address" label="From address" language="en" table="var__m_sys_hub_flow_input_ba3381323b83d6104a422254c3e45a18">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>from_address</element>
+            <help/>
+            <hint/>
+            <label>From address</label>
+            <language>en</language>
+            <name>var__m_sys_hub_flow_input_ba3381323b83d6104a422254c3e45a18</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>Marc.Mouries</sys_created_by>
+            <sys_created_on>2025-01-15 21:44:15</sys_created_on>
+            <sys_id>873381323b83d6104a422254c3e45a58</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>From address</sys_name>
+            <sys_package display_value="PhishGuard AI" source="x_snc_phishguard">4d3cde963b221e104a422254c3e45ac6</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+            <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_ba3381323b83d6104a422254c3e45a18_from_address_en</sys_update_name>
+            <sys_updated_by>Marc.Mouries</sys_updated_by>
+            <sys_updated_on>2025-01-15 21:44:15</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

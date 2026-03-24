@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="one_api_feature_provider">
+    <one_api_feature_provider action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <feature display_value="082c811d4f143110917723e552ce0b89">c21633983b4e2a104a422254c3e45a78</feature>
+        <feature_service display_value="OneExtendGenericProvider">5233278353111110c271ddeeff7b129b</feature_service>
+        <feature_service_factory><![CDATA[(function() { return new global.OneExtendGenericProvider(); })()]]></feature_service_factory>
+        <name>Flow AI Recommendations provider</name>
+        <short_description>Auto Generated </short_description>
+        <sys_class_name>one_api_feature_provider</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-06 19:29:15</sys_created_on>
+        <sys_id>c2167b983b4e2a104a422254c3e45ad0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Flow AI Recommendations provider</sys_name>
+        <sys_package display_value="PhishGuard AI" source="x_snc_phishguard">4d3cde963b221e104a422254c3e45ac6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PhishGuard AI">4d3cde963b221e104a422254c3e45ac6</sys_scope>
+        <sys_update_name>one_api_feature_provider_c2167b983b4e2a104a422254c3e45ad0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-06 19:29:15</sys_updated_on>
+        <type>script</type>
+        <type_document display_value="FlowRecommendationFetcher">42bcc91d4f143110917723e552ce0b0a</type_document>
+    </one_api_feature_provider>
+</record_update>
