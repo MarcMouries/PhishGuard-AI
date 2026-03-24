@@ -136,8 +136,6 @@ The SAFER framework provides a systematic approach to phishing email analysis:
 26. `reviewed_by` (Reference → sys_user) - Security team member who reviewed ✅
 27. `review_notes` (String, 2000) - Security team notes ✅
 
-**📊 TOTAL: 27 fields providing comprehensive phishing assessment capabilities**
-
 ### **📋 Updated List View Configuration**
 
 The list now shows **original suspicious email data first** for admin review:
